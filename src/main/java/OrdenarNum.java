@@ -13,9 +13,9 @@ import java.util.Scanner;
  */
 public class OrdenarNum {
     
-    private int num;
+    private int num,falta;
     
-    private int i,j;
+    private int i,j,z;
     
     private int listaNum[];
    
@@ -61,8 +61,24 @@ public class OrdenarNum {
             System.out.println(listaNum[i]+", ");
             
         }
-        System.out.println(") ");
-        
+        System.out.println("Numeros Faltantes");
+        int f=listaNum[0];
+           for(z=1; z < num; z++){
+            int resta=listaNum[z]-f;
+          
+            if(resta>1){
+                for(int m=1;m<resta;m++){
+                 f=f+1;
+                 System.out.print(f+",");
+                }
+                
+            }
+            f=listaNum[z];
+            
+            
+            
+            
+        }
         
         
     }
